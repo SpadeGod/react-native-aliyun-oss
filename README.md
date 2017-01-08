@@ -4,7 +4,9 @@ react-native aliyun oss
 
 # 安装
 ```
+npm install --save react-native-aliyun-oss-cp
 
+link libaray in your android and IOS project
 ```
 
 # 兼容IPv6-Only网络

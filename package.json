@@ -12,7 +12,12 @@
   ],
   "license": "MIT",
   "main": "index.js",
-  "name": "react-native-aliyun-oss",
+  "name": "react-native-aliyun-oss-cp",
   "optionalDependencies": {},
-  "version": "1.0.0"
+  "repository" :  
+  { 
+    "type" : "git", 
+    "url" : "https://github.com/SpadeGod/react-native-aliyun-oss"  
+  },
+  "version": "1.0.1"
 }
