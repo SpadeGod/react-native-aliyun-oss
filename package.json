@@ -1,0 +1,18 @@
+{
+  "author": {
+    "name": "SpadeGod"
+  },
+  "dependencies": {},
+  "description": "upload file to aliyun oss",
+  "devDependencies": {},
+  "homepage": "https://github.com/SpadeGod/react-native-aliyun-oss#readme",
+  "keywords": [
+    "aliyun",
+    "oss"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "react-native-aliyun-oss",
+  "optionalDependencies": {},
+  "version": "1.0.0"
+}
