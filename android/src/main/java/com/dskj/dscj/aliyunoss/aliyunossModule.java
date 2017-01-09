@@ -68,8 +68,9 @@ public class aliyunossModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void initWithKey(String accessKey, String secretKey, String endPoint) {
-        OSSCredentialProvider credentialProvider = new OSSPlainTextAKSKCredentialProvider(accessKey, secretKey);
+    public void initWithKey(String accessKeyId, String accessKeySecret,
+                                 String securityToken, String endPoint) {
+        OSSCredentialProvider credentialProvider =  new OSSStsTokenCredentialProvider(accessKeyId, accessKeySecret, securityToken);
 
         ClientConfiguration conf = new ClientConfiguration();
         conf.setConnectionTimeout(15 * 1000); // 连接超时，默认15秒
