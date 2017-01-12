@@ -29,7 +29,7 @@ AliyunOSS.enableOSSLog();
       SecretKey: '', // your accessKeySecret
       SecretToken: '', // your securityToken
     };
-    const endPoint = ''; // your endPoint
+    const endPoint = ' '; // your endPoint
     // 初始化阿里云组件
     AliyunOSS.initWithKey(config, endPoint);
     // upload config
