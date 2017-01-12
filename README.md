@@ -1,11 +1,11 @@
 # react-native-aliyun-oss
 
-react-native aliyun oss
+[![travis]](https://travis-ci.org/SpadeGod/react-native-aliyun-oss)  
+[travis]:https://travis-ci.org/SpadeGod/react-native-aliyun-oss.svg?branch=master "travis" 
 
 # 安装
 ```
 npm install --save react-native-aliyun-oss-cp
-
 ```
 link libaray in your android and IOS project
 
@@ -19,7 +19,7 @@ SystemConfiguration.framework
 
 # 使用
 
-```
+```javascript
 
 import AliyunOSS from 'react-native-aliyun-oss-cp'
 
@@ -29,7 +29,7 @@ AliyunOSS.enableOSSLog();
       SecretKey: '', // your accessKeySecret
       SecretToken: '', // your securityToken
     };
-    const endPoint = ' '; // your endPoint
+    const endPoint = ''; // your endPoint
     // 初始化阿里云组件
     AliyunOSS.initWithKey(config, endPoint);
     // upload config
