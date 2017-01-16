@@ -3,6 +3,7 @@
 [![travis]](https://travis-ci.org/SpadeGod/react-native-aliyun-oss)  
 [travis]:https://travis-ci.org/SpadeGod/react-native-aliyun-oss.svg?branch=master "travis" 
 
+[![npm](https://img.shields.io/npm/v/npm.svg)]([![npm](https://img.shields.io/npm/v/npm.svg)](https://www.npmjs.com/package/react-native-aliyun-oss-cp))
 # 安装
 ```
 npm install --save react-native-aliyun-oss-cp
