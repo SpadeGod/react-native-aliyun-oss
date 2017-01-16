@@ -1,6 +1,7 @@
 # react-native-aliyun-oss
 
-[![travis]](https://travis-ci.org/SpadeGod/react-native-aliyun-oss) [travis]:https://travis-ci.org/SpadeGod/react-native-aliyun-oss.svg?branch=master "travis" 
+[![travis]](https://travis-ci.org/SpadeGod/react-native-aliyun-oss)
+[travis]:https://travis-ci.org/SpadeGod/react-native-aliyun-oss.svg?branch=master "travis" 
 [![npm]](https://www.npmjs.com/package/react-native-aliyun-oss-cp)
 [npm]:https://img.shields.io/badge/npm-1.0.4-ff69b4.svg "react-native-aliyun-oss-cp"
 
