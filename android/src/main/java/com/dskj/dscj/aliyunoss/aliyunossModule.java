@@ -16,6 +16,7 @@ import com.alibaba.sdk.android.oss.model.GetObjectRequest;
 import com.alibaba.sdk.android.oss.model.GetObjectResult;
 import com.alibaba.sdk.android.oss.model.PutObjectRequest;
 import com.alibaba.sdk.android.oss.model.PutObjectResult;
+import com.alibaba.sdk.android.oss.common.auth.OSSStsTokenCredentialProvider;
 
 import com.facebook.react.bridge.NativeModule;
 import com.facebook.react.bridge.ReactApplicationContext;
@@ -68,8 +69,9 @@ public class aliyunossModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void initWithKey(String accessKey, String secretKey, String endPoint) {
-        OSSCredentialProvider credentialProvider = new OSSPlainTextAKSKCredentialProvider(accessKey, secretKey);
+    public void initWithKey(String accessKeyId, String accessKeySecret,
+                                 String securityToken, String endPoint) {
+        OSSCredentialProvider credentialProvider =  new OSSStsTokenCredentialProvider(accessKeyId, accessKeySecret, securityToken);
 
         ClientConfiguration conf = new ClientConfiguration();
         conf.setConnectionTimeout(15 * 1000); // 连接超时，默认15秒
@@ -105,10 +107,13 @@ public class aliyunossModule extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void uploadObjectAsync(String bucketName, String sourceFile, String ossFile, String updateDate, final Promise promise) {
-// 构造上传请求
+        // 构造上传请求
+        if (sourceFile != null) {
+            sourceFile = sourceFile.replace("file://", "");
+        }
         PutObjectRequest put = new PutObjectRequest(bucketName, ossFile, sourceFile);
         ObjectMetadata metadata = new ObjectMetadata();
-        metadata.setHeader("Date",updateDate);
+        metadata.setContentType("application/octet-stream");
         put.setMetadata(metadata);
 
         // 异步上传时可以设置进度回调

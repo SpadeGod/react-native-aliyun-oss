@@ -1,13 +1,13 @@
 # react-native-aliyun-oss
 
-react-native aliyun oss
+[![travis](https://travis-ci.org/SpadeGod/react-native-aliyun-oss.svg?branch=master)](https://travis-ci.org/SpadeGod/react-native-aliyun-oss)
+[![npm](https://img.shields.io/badge/npm-1.0.5-blue.svg)](https://www.npmjs.com/package/react-native-aliyun-oss-cp)
 
 # 安装
 ```
 npm install --save react-native-aliyun-oss-cp
-
-link libaray in your android and IOS project
 ```
+link libaray in your android and IOS project
 
 # 兼容IPv6-Only网络
 
@@ -19,9 +19,9 @@ SystemConfiguration.framework
 
 # 使用
 
-```
+```javascript
 
-import AliyunOSS from 'react-native-aliyun-oss'
+import AliyunOSS from 'react-native-aliyun-oss-cp'
 
 AliyunOSS.enableOSSLog();
     const config = {
@@ -29,7 +29,7 @@ AliyunOSS.enableOSSLog();
       SecretKey: '', // your accessKeySecret
       SecretToken: '', // your securityToken
     };
-    const endPoint = data.endPoint;
+    const endPoint = ''; // your endPoint
     // 初始化阿里云组件
     AliyunOSS.initWithKey(config, endPoint);
     // upload config
