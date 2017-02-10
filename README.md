@@ -1,7 +1,7 @@
 # react-native-aliyun-oss
 
 [![travis](https://travis-ci.org/SpadeGod/react-native-aliyun-oss.svg?branch=master)](https://travis-ci.org/SpadeGod/react-native-aliyun-oss)
-[![npm](https://img.shields.io/badge/npm-1.0.5-blue.svg)](https://www.npmjs.com/package/react-native-aliyun-oss-cp)
+[![npm](https://img.shields.io/badge/npm-1.0.6-blue.svg)](https://www.npmjs.com/package/react-native-aliyun-oss-cp)
 
 # 安装
 ```
@@ -70,6 +70,10 @@ await AliyunOSS.downloadObjectAsync(downloadConfig).then(path => {
   console.error(error);
 });
 ```
+
+# 更新日志
+
+2017-02-10 修复组件在ios8/9 上传时可能出现崩溃的问题
 
 # 感谢 
 
