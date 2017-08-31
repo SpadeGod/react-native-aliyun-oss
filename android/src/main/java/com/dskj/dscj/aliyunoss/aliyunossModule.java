@@ -143,9 +143,11 @@ public class aliyunossModule extends ReactContextBaseJavaModule {
             @Override
             public void onFailure(PutObjectRequest request, ClientException clientExcepion, ServiceException serviceException) {
                 // 请求异常
+                String errorMSG="";
                 if (clientExcepion != null) {
                     // 本地异常如网络异常等
                     clientExcepion.printStackTrace();
+                    errorMSG+="clientException:"+clientExcepion.getMessage();
                 }
                 if (serviceException != null) {
                     // 服务异常
@@ -153,8 +155,9 @@ public class aliyunossModule extends ReactContextBaseJavaModule {
                     Log.e("RequestId", serviceException.getRequestId());
                     Log.e("HostId", serviceException.getHostId());
                     Log.e("RawMessage", serviceException.getRawMessage());
+                    errorMSG+=serviceException.getErrorCode()+","+serviceException.getRawMessage();
                 }
-                promise.reject("UploadFaile", "message:123123");
+                promise.reject("UploadFaile", "message:"+errorMSG);
             }
         });
         Log.d("AliyunOSS", "OSS uploadObjectAsync ok!");
